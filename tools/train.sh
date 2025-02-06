@@ -3,11 +3,11 @@
 
 set -x
 
-eval "$('/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/software/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-conda activate /mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/software/anaconda3/envs/RoboFlamingo_ubuntu/
+eval "$('your_path/software/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+conda activate your_path/software/anaconda3/envs/RoboFlamingo_ubuntu/
 
 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/software/anaconda3/envs/RoboFlamingo_ubuntu/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:your_path/yanfeng/software/anaconda3/envs/RoboFlamingo_ubuntu/lib
 
 
 set -o pipefail
