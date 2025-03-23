@@ -1,17 +1,22 @@
 
 
-<h1 align="center">Software-Hardware Co-Design For Embodied AI
-Robots</h1>
+<h1 align="center">Corki: Algorithm-Architecture Co-Design for Embodied
+AI-powered Robotic Manipulation</h1>
 
 ![Python 3.8](https://img.shields.io/badge/Python-3.8-blue)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2407.04292)
 
 This is also the official code repo for the paper [Software-Hardware Co-Design For Embodied AI
-Robots](https://arxiv.org/pdf/2407.04292)
+Robots](https://arxiv.org/pdf/2407.04292), the conference version will come soon.
 
 If you have any questions about the paper and code, please contact us.
 
-All our experiments are conducted on a 8 GPUS server with 8 Nvidia A100 GPUs (80G).
+All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
+
+## 📰 News
+
+- **[2025-03-22]** - 🎉 **Our paper has been accepted to ISCA 2025!** 🎉 
+- **[2024-09-05]** - We release our code.
 
 ## Download the Calvin dataset and models:
 
@@ -21,7 +26,7 @@ Our repository is built based on the work RoboFlamingo . Please follow the [Robo
 
 #### Corki-N
 
-```python
+```
 bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args
 ```
 
@@ -83,7 +88,7 @@ bash eval_ckpts.bash
 
 ## Contact
 
-If you have any confusion about this repo, feel free to send a email to [huangyiyang24@mails.ucas.ac.cn](huangyiyang24@mails.ucas.ac.cn) or raise a issue, we will reply and improve as soon as possible.
+If you have any confusion about this repo, feel free to send an email to [huangyiyang24@mails.ucas.ac.cn](huangyiyang24@mails.ucas.ac.cn) or raise an issue, we will reply and improve as soon as possible.
 
 ## Acknowledgment
 
