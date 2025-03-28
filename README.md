@@ -115,3 +115,5 @@ License: [MIT](https://github.com/mlfoundations/open_flamingo/blob/main/LICENSE)
 Original: [https://github.com/RoboFlamingo/RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)
 License: [MIT](https://github.com/RoboFlamingo/RoboFlamingo/blob/main/LICENSE)
 
+## Lisense
+MIT
