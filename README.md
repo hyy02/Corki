@@ -9,7 +9,7 @@ AI-powered Robotic Manipulation</h1>
 This is also the official code repo for the paper [Software-Hardware Co-Design For Embodied AI
 Robots](https://arxiv.org/pdf/2407.04292), the conference version will come soon.
 
-If you have any questions about the paper and code, please contact us huangyiyang24@mails.ucas.ac.cn. We will reply and improve as soon as possible.
+If you have any questions about the paper and code, please contact us huangyiyang24@mails.ucas.ac.cn. We will reply as soon as possible.
 
 All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 
