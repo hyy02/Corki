@@ -20,7 +20,7 @@ All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 
 ## Download the Calvin dataset and models:
 
-Our repository is built based on the work RoboFlamingo. You can also follow the [RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)  to download the corresponding [OpenFlamingo](https://github.com/mlfoundations/open_flamingo) model checkpoints, conda environment, and the [Calvin](https://github.com/mees/calvin) dataset, or follow the instructions below:
+Our repository is built based on the work RoboFlamingo. You can also follow the [RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)  to download the corresponding [OpenFlamingo](https://github.com/mlfoundations/open_flamingo) model checkpoints, conda environment, and the [Calvin](https://github.com/mees/calvin) dataset, or just follow the instructions below:
 
 ``` bash
 # Install the Calvin simulation(from https://github.com/mees/calvin)
