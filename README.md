@@ -46,7 +46,13 @@ pip install requirements.txt
 pip install huggingface_hub
 huggingface-cli download --resume-download openflamingo/OpenFlamingo-3B-vitl-mpt1b-langinstruct --local-dir openflamingo/OpenFlamingo-3B-vitl-mpt1b-langinstruct # your local dir
 ```
-After you've done this, replace the conda environment path, data path, and OpenFlamingo model checkpoint path in the code with your local path.
+After you've done these steps, replace all the conda environment path, data path, and OpenFlamingo model checkpoint path in the code with your local path, for example:
+
+[Conda Environment path](https://github.com/hyy02/Corki/blob/85b97c9766903c03d29041fdd29020a9cc6e97f7/tools/train.sh#L7)
+
+[Calvin Dataset path](https://github.com/hyy02/Corki/blob/85b97c9766903c03d29041fdd29020a9cc6e97f7/robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args#L11)
+
+[OpenFlamingo Model path](https://github.com/hyy02/Corki/blob/85b97c9766903c03d29041fdd29020a9cc6e97f7/robot_flamingo/models/factory.py#L24)
 
 
 ## Training the model (using DDP):
