@@ -20,16 +20,40 @@ All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 
 ## Download the Calvin dataset and models:
 
-Our repository is built based on the work RoboFlamingo . Please follow the [RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)  to download the corresponding [OpenFlamingo](https://github.com/mlfoundations/open_flamingo) model checkpoints, conda environment, and the [Calvin](https://github.com/mees/calvin) dataset.
+Our repository is built based on the work RoboFlamingo. You can also follow the [RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)  to download the corresponding [OpenFlamingo](https://github.com/mlfoundations/open_flamingo) model checkpoints, conda environment, and the [Calvin](https://github.com/mees/calvin) dataset, or follow the instructions below:
 
-We have used both ABC and D datasets, and it is recommended to start with D datasets, which require less resources.
+``` bash
+# Install the Calvin simulation(from https://github.com/mees/calvin)
+git clone --recurse-submodules https://github.com/mees/calvin.git
+export CALVIN_ROOT=$(pwd)/calvin
+cd $CALVIN_ROOT
+conda create -n corki python=3.8  # or use virtualenv
+conda activate corki
+sh install.sh
+
+# Download the Calvin Datasets
+cd $CALVIN_ROOT/dataset
+# choose D / ABC to download the datasets, D is approximately 166GB, ABC is apporximately 600GB
+sh download_data.sh D | ABC
+
+# Clone the Corki repository
+git clone https://github.com/hyy02/Corki.git
+cd Corki
+conda activate corki
+pip install requirements.txt
+
+# Download the hugginface models use huggingface-cli tool, you can use other tools as well
+pip install huggingface_hub
+huggingface-cli download --resume-download openflamingo/OpenFlamingo-3B-vitl-mpt1b-langinstruct --local-dir openflamingo/OpenFlamingo-3B-vitl-mpt1b-langinstruct # your local dir
+```
+After you've done this, replace the conda environment path, data path, and OpenFlamingo model checkpoint path in the code with your local path.
 
 
 ## Training the model (using DDP):
 
 #### Corki-N
 
-```
+``` bash
 bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args
 ```
 
@@ -47,13 +71,13 @@ Adaptive training is divided into two stages:
 
 - In the first stage, we use the episodes in the dataset to get proper adaptive steps through our waypoints extraction algorithm, in order to make the trajectories predicted by the model easier to converge, so we train 5 epochs first.
 
-  ```python
+  ```bash
   bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_adaptive.args
   ```
 
 - In the second stage, we will extract waypoints from the trajectory predicted by the model during the inference time to determine how many steps to accelerate. Therefore, in order to ensure that our training is consistent with our evaluation process, we use the final checkpoint from the first stage to continue training. In this 5 epochs training, we will use the predicted trajectory to extract waypoints.
 
-  ```
+  ```bash
   bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_adaptive_model_output.args
   ```
 
@@ -65,7 +89,7 @@ bash eval_ckpts.bash
 
 - Make sure you use the same configuration as your training before testing, If you change the configuration in training, you need to change `robot_flamingo/pt_eval_ckpts.bash` during testing.
 
-  ```
+  ```bash
   # Example for Corki-5,make sure they are same with the .args files you used in training
   if [ ${use_gripper} -eq 1 ] && [ ${use_state} -eq 0 ]
   then
