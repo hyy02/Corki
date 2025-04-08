@@ -51,7 +51,7 @@ pip install -r requirements.txt
 # Install the torch 1.12.1+cu113 (https://download.pytorch.org/whl/cu113/)
 wget https://download.pytorch.org/whl/cu113/torch-1.12.1%2Bcu113-cp38-cp38-linux_x86_64.whl#sha256=4adf483ac2d047534a7d023f0022bd8694d87627068ad6dddf186cb3273bbfa2
 wget https://download.pytorch.org/whl/cu113/torchvision-0.13.1%2Bcu113-cp38-cp38-linux_x86_64.whl#sha256=899cac298d2a7cf6a8ca62d3ede2a7d3f50b86027f8be2d15639baf74da5d8f0
-https://download.pytorch.org/whl/cu113/torchaudio-0.12.1%2Bcu113-cp38-cp38-linux_x86_64.whl#sha256=07324a67c069a986bb991c509c9442e8fce72326941e55fa4738d88cbb806047
+wget https://download.pytorch.org/whl/cu113/torchaudio-0.12.1%2Bcu113-cp38-cp38-linux_x86_64.whl#sha256=07324a67c069a986bb991c509c9442e8fce72326941e55fa4738d88cbb806047
 pip install torch-1.12.1+cu113-cp38-cp38-linux_x86_64.whl
 pip install torchaudio-0.12.1+cu113-cp38-cp38-linux_x86_64.whl
 pip install torchvision-0.13.1+cu113-cp38-cp38-linux_x86_64.whl
