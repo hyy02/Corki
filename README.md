@@ -41,7 +41,9 @@ sh install.sh
 
 # Download the Calvin Datasets
 cd $CALVIN_ROOT/dataset
-# choose D / ABC to download the datasets, D is approximately 166GB, ABC is apporximately 600GB
+# Choose D / ABC to download the datasets, D is approximately 166GB, ABC is apporximately 600GB.
+# This is time consuming, we are trying to give a faster way to download.
+# Meantime, you can download the debug dataset (1.2G) to verify the subsequent process.
 sh download_data.sh D | ABC
 
 # Clone the Corki repository
