@@ -40,7 +40,7 @@ sh download_data.sh D | ABC
 git clone https://github.com/hyy02/Corki.git
 cd Corki
 conda activate corki
-pip install requirements.txt
+pip install -r requirements.txt
 
 # Download the hugginface models use huggingface-cli tool, you can use other tools as well
 pip install huggingface_hub
