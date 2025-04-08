@@ -46,6 +46,8 @@ sh download_data.sh D | ABC
 git clone https://github.com/hyy02/Corki.git
 cd Corki
 conda activate corki
+# If you encounter issues while installing torch, torchaudio, or torchvision.
+# You can either remove the version constraints in requirements.txt or use the following commands instead:
 pip install -r requirements.txt
 
 # Install the torch 1.12.1+cu113 (https://download.pytorch.org/whl/cu113/)
