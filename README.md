@@ -18,6 +18,12 @@ All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 - **[2025-03-22]** - 🎉 **Our paper has been accepted to ISCA 2025!** 🎉 
 - **[2024-09-05]** - We release our code.
 
+## :white_check_mark: TODO
+**If you have any idea to make this repo better, please contact us and thank you.**
+- [x] Fix the command typos
+- [ ] Docker environment
+- [ ] Corki checkpoint 
+
 ## Download the Calvin dataset and models:
 
 Our repository is built based on the work RoboFlamingo. You can also follow the [RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)  to download the corresponding [OpenFlamingo](https://github.com/mlfoundations/open_flamingo) model checkpoints, conda environment, and the [Calvin](https://github.com/mees/calvin) dataset, or just follow the instructions below:
@@ -41,6 +47,11 @@ git clone https://github.com/hyy02/Corki.git
 cd Corki
 conda activate corki
 pip install -r requirements.txt
+
+# Install the torch 1.12.1+cu113
+wget https://download.pytorch.org/whl/cu113/torch-1.12.1%2Bcu113-cp38-cp38-linux_x86_64.whl#sha256=4adf483ac2d047534a7d023f0022bd8694d87627068ad6dddf186cb3273bbfa2
+pip install torch-1.12.1+cu113-cp38-cp38-linux_x86_64.whl
+
 
 # Download the hugginface models use huggingface-cli tool, you can use other tools as well
 pip install huggingface_hub
