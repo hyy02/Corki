@@ -22,6 +22,7 @@ All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 **If you have any idea to make this repo better, please contact us and thank you.**
 - [x] Fix the command typos
 - [ ] Docker environment
+- [ ] Faster Calvin dataset access
 - [ ] Corki checkpoint 
 
 ## Download the Calvin dataset and models:
