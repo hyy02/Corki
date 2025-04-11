@@ -6,7 +6,9 @@ import random
 from collections import OrderedDict
 import numpy as np
 import torch
-
+import sys
+sys.path.append('/home/Corki')
+sys.path.append('/home/Corki/open_flamingo')
 torch.autograd.set_detect_anomaly(True)
 
 import wandb
@@ -471,7 +473,7 @@ def main():
         calvin_dataset = get_data(args, image_processor, tokenizer, "real")
     else:
         calvin_dataset = get_data(args, image_processor, tokenizer, "calvin")
-        calvin_sim = get_data(args, image_processor, tokenizer, "calvinSim")
+        # calvin_sim = get_data(args, image_processor, tokenizer, "calvinSim")
 
     random_seed(args.seed, args.rank)
 

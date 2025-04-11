@@ -4,12 +4,15 @@ import argparse
 import glob
 import os
 import random
+import sys
+sys.path.append('/home/Corki')
+sys.path.append('/home/Corki/open_flamingo')
 
 from robot_flamingo.eval.eval_utils import eval_one_epoch_calvin_ddp
 from torch.distributed.elastic.multiprocessing.errors import record
 
-os.environ['PYOPENGL_PLATFORM'] = 'egl'
-# os.environ['PYOPENGL_PLATFORM'] = 'osmesa'
+# os.environ['PYOPENGL_PLATFORM'] = 'egl' # not use egl
+os.environ['PYOPENGL_PLATFORM'] = 'osmesa'
 import numpy as np
 import torch
 import wandb

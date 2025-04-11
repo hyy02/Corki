@@ -439,7 +439,7 @@ def evaluate_policy(model, env, epoch, calvin_conf_path, eval_log_dir=None, debu
     task_oracle = hydra.utils.instantiate(task_cfg)
     if diverse_inst:
         with open(
-                '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo/enrich_lang_annotations.json',
+                '/home/Corki/enrich_lang_annotations.json',
                 'r') as f:
             val_annotations = json.load(f)
     else:
@@ -494,7 +494,7 @@ def evaluate_policy_ddp(model, env, epoch, calvin_conf_path, eval_log_dir=None, 
     # val_annotations = OmegaConf.load(conf_dir / "annotations/new_playtable_validation.yaml")
     if diverse_inst:
         with open(
-                '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo2/lang_annotation_cache.json',
+                '/home/Corki/ang_annotation_cache.json',
                 'r') as f:
             val_annotations = json.load(f)
     else:
@@ -502,7 +502,7 @@ def evaluate_policy_ddp(model, env, epoch, calvin_conf_path, eval_log_dir=None, 
 
     eval_log_dir = get_log_dir(eval_log_dir)
     with open(
-            '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo2/eval_sequences.json',
+            '/home/Corki/eval_sequences.json',
             'r') as f:
         eval_sequences = json.load(f)
     device_num = int(torch.distributed.get_world_size())
@@ -918,7 +918,7 @@ def main():
 def generate_zero_shot_instr():
     random.seed(123)
     with open(
-            '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo2/enrich_lang_annotations.json',
+            '/home/Corki/enrich_lang_annotations.json',
             'r') as f:
         val_annotations = json.load(f)
     eval_sequences = get_sequences(NUM_SEQUENCES)
@@ -930,7 +930,7 @@ def generate_zero_shot_instr():
             res.append(random.choice(val_annotations[subtask]))
         all_res.append(res)
     with open(
-            '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo2/lang_annotation_cache.json',
+            '/home/Corki/lang_annotation_cache.json',
             'w') as f:
         json.dump(all_res, f, indent=1)
 
@@ -939,7 +939,7 @@ def save_sequences():
     random.seed(123)
     eval_sequences = get_sequences(NUM_SEQUENCES)
     with open(
-            '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo2/eval_sequences.json',
+            '/home/Corki/eval_sequences.json',
             'w') as f:
         json.dump(eval_sequences, f)
 

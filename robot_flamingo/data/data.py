@@ -35,6 +35,8 @@ from webdataset.tariterators import (
     url_opener,
     valid_sample,
 )
+import sys
+sys.path.append('/home/calvin')
 
 from calvin_agent.datasets.utils.episode_utils import (
     get_state_info_dict,
@@ -280,9 +282,7 @@ class BaseCalvinDataset(Dataset):
         self.aux_lang_loss_window = aux_lang_loss_window
         self.traj_cons = traj_cons
 
-        with open(
-                '/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo/enrich_lang_annotations.json',
-                'r') as f:
+        with open('/home/Corki/enrich_lang_annotations.json','r') as f:
             self.enrich_lang = json.load(f)
         self.text_aug = text_aug
 
@@ -857,7 +857,8 @@ class DiskCalvinDataset(BaseCalvinDataset):
         lang_ann = lang_data["language"]["ann"]  # length total number of annotations
         lang_task = lang_data["language"]["task"]
         lang_lookup = []
-        partial_st_ed_list = load_partial_traj_data()
+        # partial_st_ed_list = load_partial_traj_data()
+        partial_st_ed_list = []
         for i, (start_idx, end_idx) in enumerate(ep_start_end_ids):
             if self.partial_data:
                 if (start_idx, end_idx) not in partial_st_ed_list:
@@ -1564,3 +1565,7 @@ def get_data(args, image_processor, tokenizer, dataset_type, epoch=0,eval=False)
         args, image_processor=image_processor, epoch=epoch, tokenizer=tokenizer
     )
 
+def load_partial_traj_data():
+    with open('partial_task_data.json', 'r') as f:
+        data = json.load(f)
+    return data

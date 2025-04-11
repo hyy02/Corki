@@ -1,0 +1,63 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python 调试程序: 包含参数的当前文件",
+            "type": "debugpy",
+            "python": "/opt/conda/envs/corki/bin/python3",
+            "request": "launch",
+            "program": "/home/Corki/robot_flamingo/eval/eval_calvin.py",
+            "console": "integratedTerminal",
+            // "args": [
+            //     "--llm_name", "mpt_dolly_3b",
+            //     "--traj_cons",
+            //     "--use_gripper",
+            //     "--fusion_mode", "post",
+            //     "--rgb_pad", "10",
+            //     "--gripper_pad", "4",
+            //     "--precision", "fp32",
+            //     "--num_epochs", "10",
+            //     "--gradient_accumulation_steps", "1",
+            //     "--batch_size_calvin", "6",
+            //     "--calvin_dataset", "/data/calvin_debug_dataset",
+            //     "--cross_attn_every_n_layers", "4",
+            //     "--dataset_resampled",
+            //     "--loss_multiplier_calvin", "1.0",
+            //     "--workers", "1",
+            //     "--lr_scheduler", "constant",
+            //     "--warmup_steps", "5000",
+            //     "--learning_rate", "1e-4",
+            //     "--save_every_iter", "10000",
+            //     "--from_scratch",
+            //     "--window_size", "12",
+            //     "--multi_step_action", "9",
+            //     "--mask_ratio", "0.2",
+            //     "--action_num", "5",
+            //     "--use_episode",
+            //     "--episode_loss", "point_sum",
+            //     "--take_steps", "5"],
+            "args":[
+                "--precision", "fp32",
+                "--run_name", "RobotFlamingoDBG",
+                "--window_size", "12", 
+                "--fusion_mode", "post",
+                "--calvin_dataset", "/data/task_D_D",
+                "--lm_path", "/modelzoo/anas-awadalla/mpt-1b-redpajama-200b-dolly",
+                "--tokenizer_path", "/modelzoo/anas-awadalla/mpt-1b-redpajama-200b-dolly",
+                "--cross_attn_every_n_layers", "4",
+                "--evaluate_from_checkpoint", "/home/Corki/checkpoint_gripper_post_hist_1_aug_10_4_traj_cons_ws_12_mpt_dolly_3b_9_fur_step_0.pth0.pth",
+                "--calvin_conf_path", "/home/calvin/calvin_models/conf",
+                "--workers","1",
+            ],
+            "env": {
+                "MASTER_ADDR":"localhost",
+                "MASTER_PORT":"29500",
+                "EGL_VISIBLE_DEVICES":"0",
+                "DISPLAY":":99",
+            }
+        }
+    ]
+}

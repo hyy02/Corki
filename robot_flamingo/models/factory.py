@@ -22,10 +22,10 @@ mpt_dict = {
     #     "openflamingo_checkpoint": "path_to/OpenFlamingo-3B-vitl-mpt1b-langinstruct/checkpoint.pt"
     # },
     "mpt_dolly_3b": {
-        "lang_encoder_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo/checkpoints/mpt-1b-redpajama-200b-dolly",
-        "tokenizer_path": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo/checkpoints/mpt-1b-redpajama-200b-dolly",
+        "lang_encoder_path": "/modelzoo/anas-awadalla/mpt-1b-redpajama-200b-dolly",
+        "tokenizer_path": "/modelzoo/anas-awadalla/mpt-1b-redpajama-200b-dolly",
         "cross_attn_every_n_layers": 1,
-        "openflamingo_checkpoint": "/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo/checkpoints/OpenFlamingo-3B-vitl-mpt1b-langinstruct/checkpoint.pt"
+        "openflamingo_checkpoint": "/modelzoo/openflamingo/OpenFlamingo-3B-vitl-mpt1b-langinstruct/checkpoint.pt"
     },
     "mpt_4b": {
         "lang_encoder_path": "path_to/RedPajama-INCITE-Instruct-3B-v1",
@@ -151,7 +151,6 @@ def create_model_and_transforms(
         window_size = window_size // skip_steps
     vision_encoder, _, image_processor = open_clip.create_model_and_transforms(
         clip_vision_encoder_path, pretrained=clip_vision_encoder_pretrained,
-        cache_dir='/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/yanfeng/project/robotic/RoboFlamingo/checkpoints'
     )
     # set the vision encoder to output the visual features
     vision_encoder.visual.output_tokens = True
@@ -263,7 +262,7 @@ def create_model_and_transforms(
         rlbench=rlbench,
         adaptive=adaptive,
         threshold=threshold,
-        take_steps=take_step,
+        take_steps=take_steps,
         **flamingo_kwargs,
     )
 
