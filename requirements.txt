@@ -47,3 +47,4 @@ yarl==1.9.2
 zarr==2.15.0
 zipp==3.17.0
 braceexpand
+webdataset
