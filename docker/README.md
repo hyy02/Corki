@@ -66,7 +66,7 @@ bash build_and_run.sh
 Once inside the container:
 
 ```bash
-bash /home/Corki/docker/prepare.bash
+source /home/Corki/docker/prepare.bash
 ```
 
 > Note:  The bash used to fix two problems:
