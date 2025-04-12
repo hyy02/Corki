@@ -82,7 +82,7 @@ After you've done these steps, replace all the conda environment path, data path
 #### Corki-N
 
 ``` bash
-bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args
+bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args 8
 ```
 
 You can train **Corki-n** by modifying the `take_steps` value to `n` in the file `robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args`
@@ -100,13 +100,13 @@ Adaptive training is divided into two stages:
 - In the first stage, we use the episodes in the dataset to get proper adaptive steps through our waypoints extraction algorithm, in order to make the trajectories predicted by the model easier to converge, so we train 5 epochs first.
 
   ```bash
-  bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_adaptive.args
+  bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_adaptive.args 8
   ```
 
 - In the second stage, we will extract waypoints from the trajectory predicted by the model during the inference time to determine how many steps to accelerate. Therefore, in order to ensure that our training is consistent with our evaluation process, we use the final checkpoint from the first stage to continue training. In this 5 epochs training, we will use the predicted trajectory to extract waypoints.
 
   ```bash
-  bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_adaptive_model_output.args
+  bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_adaptive_model_output.args 8
   ```
 
 ## Evaluating the model on the CALVIN benchmark
