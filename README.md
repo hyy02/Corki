@@ -14,18 +14,20 @@ If you have any questions about the paper and code, please contact us huangyiyan
 All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 
 ## 📰 News
-
+- **[2025-04-12]** - We improved the repo, made a series of optimization such as docker. 
 - **[2025-03-22]** - 🎉 **Our paper has been accepted to ISCA 2025!** 🎉 
 - **[2024-09-05]** - We release our code.
 
 ## :white_check_mark: TODO
 **If you have any idea to make this repo better, please contact us and thank you.**
 - [x] Fix the command typos
-- [ ] Docker environment
-- [ ] Faster Calvin dataset access
-- [ ] Mark all paths need to change
+- [x] Docker environment
+- [x] Faster Calvin dataset access
+- [x] Mark all paths need to change
 - [ ] Corki checkpoint 
-
+## Docker Environment
+We highly recommend that you try docker, it will help you solve a lot of installation problems, such as egl, conda environment, cuda version ...
+- [See here for detail installation tutorial](https://github.com/hyy02/Corki/tree/main/docker#readme)
 ## Download the Calvin dataset and models:
 
 Our repository is built based on the work RoboFlamingo. You can also follow the [RoboFlamingo](https://github.com/RoboFlamingo/RoboFlamingo)  to download the corresponding [OpenFlamingo](https://github.com/mlfoundations/open_flamingo) model checkpoints, conda environment, and the [Calvin](https://github.com/mees/calvin) dataset, or just follow the instructions below:
