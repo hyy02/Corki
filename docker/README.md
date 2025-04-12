@@ -82,7 +82,7 @@ source /home/Corki/docker/prepare.bash
 bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_debug.args
 ```
 
-- The config above will use 8 GPU （you can change in tools/train.sh torch --nnodes to specific your server）with VRAM above 31 GB, and only train one epoch use calvin_debug_dataset, it only takes several seconds
+- The config above will use only one GPU （you can change in tools/train.sh torch --nnodes to specific your server）with VRAM above 31 GB, and only train one epoch use calvin_debug_dataset, it only takes several seconds
 
 ```bash
 bash eval_ckpts.bash
