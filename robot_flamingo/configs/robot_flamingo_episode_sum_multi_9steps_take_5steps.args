@@ -7,7 +7,7 @@
 --precision fp32
 --num_epochs 10
 --gradient_accumulation_steps 1
---batch_size_calvin 1
+--batch_size_calvin 6
 --calvin_dataset /data/calvin_debug_dataset
 --cross_attn_every_n_layers 4
 --dataset_resampled
