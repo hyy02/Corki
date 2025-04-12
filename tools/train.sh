@@ -23,6 +23,6 @@ which torchrun
 # ==== 启动训练 ====
 torchrun --nnodes=1 --nproc_per_node=8 --master_port=29502 \
   robot_flamingo/train/train_calvin.py \
-  ${args} \vim 
+  ${args} \
   --run_name "$OUTPUT_BASE" \
   |& tee -a "$OUTPUT_BASE/output.log"
