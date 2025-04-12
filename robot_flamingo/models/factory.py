@@ -151,6 +151,7 @@ def create_model_and_transforms(
         window_size = window_size // skip_steps
     vision_encoder, _, image_processor = open_clip.create_model_and_transforms(
         clip_vision_encoder_path, pretrained=clip_vision_encoder_pretrained,
+        cache_dir='/modelzoo'
     )
     # set the vision encoder to output the visual features
     vision_encoder.visual.output_tokens = True

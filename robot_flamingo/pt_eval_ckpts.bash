@@ -83,12 +83,10 @@ torchrun --nnodes=1 --nproc_per_node=${node_num}  --master_port=29502 robot_flam
     --evaluate_from_checkpoint ${evaluate_from_checkpoint} \
     --calvin_conf_path ${calvin_conf_path} \
     --use_episode \
-    --waypoint \
-    --use_waypoint \
+    --multi_step_action 9 \
+    --action_num 5 \
     --threshold 0.5 \
     --mask_ratio 0.5 \
-    --adaptive feng \
-    --episode_loss point_sum \
     --workers 1 |& tee -a ${log_file}
 fi
 

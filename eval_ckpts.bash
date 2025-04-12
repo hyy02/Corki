@@ -34,7 +34,8 @@ conda activate corki
 
 # export DISPLAY=:99
 # export PYTHONPATH=/RoboFlamingo-origin
-export LIBGL_ALWAYS_SOFTWARE=1
-export EVALUTION_ROOT=$(pwd)
+# export LIBGL_ALWAYS_SOFTWARE=1
+# export EVALUTION_ROOT=$(pwd)
 
+# python try.py
 python eval_ckpts.py
