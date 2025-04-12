@@ -1,6 +1,6 @@
 import os
 
-ckpt_dir = '/modelzoo'
+ckpt_dir = '/home/Corki/exps/robot_flamingo_episode_sum_debug'
 num_list = [0]
 ckpt_names = ['checkpoint_gripper_post_hist_1_aug_10_4_traj_cons_ws_12_mpt_dolly_3b_9_fur_step_{}.pth{}.pth'.format(i,i) for i in num_list]
 print(ckpt_names)
