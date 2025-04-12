@@ -79,7 +79,7 @@ source /home/Corki/docker/prepare.bash
 ## The Minimal try to run the code base
 
 ```bash
-bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_debug.args
+bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_debug.args 1
 ```
 
 - The config above will use only one GPU （you can change in tools/train.sh torch --nnodes to specific your server）with VRAM above 31 GB, and only train one epoch use calvin_debug_dataset, it only takes several seconds
