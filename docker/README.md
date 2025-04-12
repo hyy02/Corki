@@ -21,7 +21,7 @@ This project provides a Docker development environment for the **Corki** project
 git clone --recurse-submodules https://github.com/hyy02/calvin.git
 git clone https://github.com/hyy02/Corki.git
 
-# Need to Specific the dir to download the model and dataset
+# Need to Specific the dir to download the model and dataset, make sure have enough space (30G)
 export CORKI_MODEL_DIR=/your_dir_to_download
 export CORKI_DATA_DIR=/your_dir_to_download
 
