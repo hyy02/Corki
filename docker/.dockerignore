@@ -1,0 +1,53 @@
+# 忽略临时文件和缓存
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+*.log
+
+# 忽略数据和模型文件
+*.pth
+*.pt
+*.ckpt
+*.h5
+*.onnx
+*.npz
+*.npy
+*.zip
+*.tar
+*.tar.gz
+
+# 忽略 Huggingface 模型缓存
+huggingface/
+*.cache/
+*.huggingface/
+
+# 忽略编译文件和 Conda 环境
+build/
+dist/
+*.egg-info/
+.env/
+.venv/
+env/
+ENV/
+.conda/
+conda-meta/
+pip-wheel-metadata/
+
+# 忽略 git 和 VSCode 文件
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# 忽略数据集（本地的）
+dataset/
+data/
+
+# 忽略 host-side 工作目录挂载的副作用
+host/
+
+# 忽略 docker 自己的文件（避免嵌套复制）
+Dockerfile
+build_and_run.sh
+.dockerignore
+
