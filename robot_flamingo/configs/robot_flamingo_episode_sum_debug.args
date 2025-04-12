@@ -5,7 +5,7 @@
 --rgb_pad 10
 --gripper_pad 4
 --precision fp32
---num_epochs 10
+--num_epochs 1
 --gradient_accumulation_steps 1
 --batch_size_calvin 1
 --calvin_dataset /data/calvin_debug_dataset
