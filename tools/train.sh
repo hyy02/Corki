@@ -14,7 +14,7 @@ conda activate corki
 # ==== 输出路径处理 ====
 args=$(cat $1)
 OUTPUT_BASE=$(echo $1 | sed -e "s/robot_flamingo\/configs/exps/g" | sed -e "s/.args$//g")
-OUTPUT_BASE=/mnt/dolphinfs/hdd_pool/docker/user/hadoop-vacv/huangyiyang02/new/RoboFlamingo-origin/$OUTPUT_BASE
+OUTPUT_BASE=/home/Corki/$OUTPUT_BASE
 mkdir -p $OUTPUT_BASE
 
 mkdir -p "$OUTPUT_BASE"
