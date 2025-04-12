@@ -17,7 +17,7 @@ This project provides a Docker development environment for the **Corki** project
 ## Basic preparation
 
 ```bash
-# Clone the repo at the current docker path
+# Clone the repo at the current docker path e.g your_dir/Corki/docker
 git clone --recurse-submodules https://github.com/hyy02/calvin.git
 git clone https://github.com/hyy02/Corki.git
 
