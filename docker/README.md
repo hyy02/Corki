@@ -109,8 +109,7 @@ bash eval_ckpts.bash
 
 ### 🧪 Tips & Troubleshooting
 
-- 🐌 Slow install? Use `-i https://pypi.tuna.tsinghua.edu.cn/simple` to speed up PyPI downloads in China.
-- ⚠️ Avoid using `source ~/.bashrc` in Docker `RUN` commands — prefer `eval "$(conda shell.bash hook)"`.
+- 🐌 Slow install pip? Use `-i https://pypi.tuna.tsinghua.edu.cn/simple` to speed up PyPI downloads in China.
 
 ------
 
