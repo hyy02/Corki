@@ -10,8 +10,6 @@ This project provides a Docker development environment for the **Corki** project
 - ✅ Pre-installed dependencies from `requirements.txt`
 - ✅  Egl dependencies 
 - ✅ Compatible with PyTorch 
-- ✅ Custom `install.sh` script support
-
 
 
 ## Basic preparation
@@ -39,7 +37,7 @@ unzip "${CORKI_DATA_DIR}/calvin_debug_dataset.zip"
 
 ### 🐳 Build the Docker Image and run the container
 
-Make sure you’re in the root directory of this project (where the `Dockerfile` and `requirements.txt` are located), then run:
+Make sure you’re in the docker directory of this project (where the `Dockerfile` and `requirements.txt` are located), then run:
 
 ```bash
 # Build the image, Mount the model and data path
