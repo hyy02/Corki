@@ -81,6 +81,24 @@ bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_debug.args
 ```
 
 - The config above will use only one GPU （you can the 1 to 8 to specific your server）with VRAM above 31 GB, and only train one epoch use calvin_debug_dataset, it only takes several seconds
+- If you want to reproduce the results, please change the configs file, and change the dataset_dir to task_D_D in the config file.
+
+```bash
+bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_multi_9steps_take_5steps.args
+
+robot_flamingo_episode_sum_multi_9steps_take_5steps.args:
+--llm_name mpt_dolly_3b
+--traj_cons
+--use_gripper
+--fusion_mode post
+--rgb_pad 10
+--gripper_pad 4
+--precision fp32
+--num_epochs 10
+--gradient_accumulation_steps 1
+--batch_size_calvin 6
+--calvin_dataset /data/calvin_debug_dataset # change here to task_D_D
+```
 
 ```bash
 bash eval_ckpts.bash
