@@ -83,11 +83,13 @@ source /home/Corki/docker/prepare.bash
 
 ## The Minimal try to run the code base
 
+### Training process
+#### Scripts
 ```bash
 bash tools/train.sh robot_flamingo/configs/robot_flamingo_episode_sum_debug.args 1
 ```
 
-- The config above will use only one GPU （you can the 1 to 8 to specific your server）with VRAM above 31 GB, and only train one epoch use calvin_debug_dataset, it only takes several seconds
+- The config above will use only one GPU （you can the 1 to 8 to specific your server）with VRAM above **32 GB**, and only train one epoch use calvin_debug_dataset, it only takes several seconds
 - If you want to reproduce the results, please change the configs file, and change the dataset_dir to task_D_D in the config file.
 
 ```bash
@@ -106,7 +108,14 @@ robot_flamingo_episode_sum_multi_9steps_take_5steps.args:
 --batch_size_calvin 6
 --calvin_dataset /data/calvin_debug_dataset # change here to task_D_D
 ```
+### Evaluation Process
+We provide the model checkpoint generated during the previous training stage. You may directly download this file and place it in the designated location within the Docker container to complete the verification of the code.
+- Google drive: https://drive.google.com/file/d/1Dp4IQ6PEQU7sUHFxJiCGCy3HObobz39i/view?usp=sharing
 
+```bash
+put the file in the dir: /home/Corki/exps/robot_flamingo_episode_sum_debug
+```
+#### Scripts
 ```bash
 bash eval_ckpts.bash
 ```
