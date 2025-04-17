@@ -36,7 +36,14 @@ unzip "${CORKI_DATA_DIR}/calvin_debug_dataset.zip"
 ```
 
 ### 🐳 Build the Docker Image and run the container
+if you don't want to build the image, or meet some problems, you can download the built image for these links, and delete the docker build command in the `build_and_run.sh`. Otherwise, you can run the `build_and_run.sh` directly, which may be faster.
+- Google Drive:
+- Baidu Netdisk: https://pan.baidu.com/s/1hH-FFPXkSNBkvdIZjDrs5g?pwd=ma7g
 
+```bash
+docker load -i corki_calvin.tar
+```
+  
 Make sure you’re in the docker directory of this project (where the `Dockerfile` and `requirements.txt` are located), then run:
 
 ```bash
