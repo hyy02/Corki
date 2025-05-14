@@ -110,7 +110,7 @@ robot_flamingo_episode_sum_multi_9steps_take_5steps.args:
 ```
 ### Evaluation Process
 We provide the model checkpoint generated during the previous training stage. You may directly download this file and place it in the designated location within the Docker container to complete the verification of the code. (Note that this checkpoint is just for debug the codebase.)
-- Google drive: https://drive.google.com/file/d/1Dp4IQ6PEQU7sUHFxJiCGCy3HObobz39i/view?usp=sharing
+- Google drive: https://drive.google.com/file/d/1uuUjrpX9SY2TOL25_-bh2qTv8QogSJUX/view?usp=sharing
 
 ```bash
 put the file in the dir: /home/Corki/exps/robot_flamingo_episode_sum_debug
