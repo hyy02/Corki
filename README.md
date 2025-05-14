@@ -6,7 +6,7 @@ AI-powered Robotic Manipulation</h1>
 ![Python 3.8](https://img.shields.io/badge/Python-3.8-blue)
 [![arXiv](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2407.04292)
 
-This is also the official code repo for the paper [Software-Hardware Co-Design For Embodied AI
+This is also the official software code repo for the paper [Software-Hardware Co-Design For Embodied AI
 Robots](https://arxiv.org/pdf/2407.04292), the conference version will come soon.
 
 If you have any questions about the paper and code, please contact us huangyiyang24@mails.ucas.ac.cn. We will reply as soon as possible.
