@@ -27,7 +27,7 @@ All our experiments are conducted on a server with 8 Nvidia A100 GPUs (80G).
 - [ ] Add latency & energy scripts
 - [ ] Corki checkpoint 
 ## Docker Environment
-We highly recommend that you try docker, it will help you solve a lot of installation problems, such as egl, conda environment, cuda version ...
+We highly recommend you to try docker, it will help you solve a lot of installation problems, such as egl, conda environment, cuda version ...
 - [See here for detail installation tutorial](https://github.com/hyy02/Corki/tree/main/docker#readme)
 ## Download the Calvin dataset and models:
 
